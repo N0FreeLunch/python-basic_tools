@@ -128,10 +128,9 @@ error
 
 ## \. expression
 ```
-  example1 = '저는 91년에 태어났습니다. 97년에는 IMF가 있었습니다. 지금은 2020년입니다.'
+  example1 = '저는 91년에 태어났습니다. 975년에는 IMF가 있었습니다. 지금은 2020년입니다.'
   re.findall(r'\d.+년', example1)
 ```
-
 
 ## \? expression
 ```
@@ -166,8 +165,8 @@ error
 
 ## split
 ```
-  centence = 'I have a lovely dog, really. I am not telling a lie. What a pretty dog! I love this dog.'
-  re.split(r'[.?!]', centence)
+  sentence = 'I have a lovely dog, really. I am not telling a lie. What a pretty dog! I love this dog.'
+  re.split(r'[.?!]', sentence)
 ```
 
 
@@ -177,4 +176,29 @@ error
   re.split(r';', data)
   for i in re.split(r';', data):
     print(re.split(r':',i))
+```
+
+
+## sub
+```
+  sentence = 'I have a lovely dog, really. I am not telling a lie. What a pretty dog! I love this dog.'
+  re.sub(r'dog', 'cat', sentence)
+```
+
+
+## \\n
+```
+  words = 'I am home now. \n\n\nI am with my cat. \n\n'
+  print(words)
+```
+
+
+## \\w
+```
+  sentence = 'I have a lovely dog, really. I am not telling a lie'
+  re.findall(r'\w+ly', sentence)
+```
+```
+  sentence = 'I have a lovely_dog_really. I am not telling a lie'
+  re.findall(r'\w+ly', sentence)
 ```
