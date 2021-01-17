@@ -148,11 +148,33 @@ error
   re.findall(r'\d+.년', example1)
 ```
 
-
 ## greed
 ```
   example = '이동민 교수님은 다음과 같이 설명했습니다(이동민, 2019). 그런데 다른 교수님은 이 문제에 대해서 다른 견해를 가지고 있었습니다.(최재영, 2019). 또 다른 견해도 있었습니다(Lion, 2018)'
 
   result = re.findall(r'\(.+\)', example)
   result
+```
+
+
+## no greed
+```
+  result = re.findall(r'\(.+?\)', example)
+  result
+```
+
+
+## split
+```
+  centence = 'I have a lovely dog, really. I am not telling a lie. What a pretty dog! I love this dog.'
+  re.split(r'[.?!]', centence)
+```
+
+
+## split return array
+```
+  data='a:3; b:4; c:5'
+  re.split(r';', data)
+  for i in re.split(r';', data):
+    print(re.split(r':',i))
 ```
