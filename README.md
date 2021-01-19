@@ -45,6 +45,23 @@ y
 rm -rf ~/anaconda3 ~/.condarc ~/.conda ~/.continuum
 ```
 
+conda env setting
+-----------------
+```
+  conda config --set auto_activate_base false
+```
+
+run conda env
+-------------
+```
+  conda activate
+```
+
+run activate env
+----------------
+```
+  conda deactivate
+```
 
 ##Run python shell in this project folder
 ```
