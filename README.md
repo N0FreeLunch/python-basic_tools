@@ -38,9 +38,8 @@ Proceed ([y]/n)?
 y
 ```
 
-[Caution!!] Dont run this. anaconda3 remove process
----------------------------------------------------
-:warning:
+[Caution!!]:warning::warning::warning: Dont run this. anaconda3 remove process
+------------------------------------------------------------------------------
 ```
 rm -rf ~/anaconda3 ~/.condarc ~/.conda ~/.continuum
 ```

@@ -1,4 +1,4 @@
-##open file
+## open file
 ```
   import os, re, codecs
   path = os.getcwd()
@@ -115,7 +115,7 @@ os.chdir(path)
   test.close()
 ```
 
-## get name
+## get names
 ```
   char = r'[A-Z][a-z]+:'
   char = re.compile(r'[A-Z][a-z]+:')
@@ -130,8 +130,111 @@ os.chdir(path)
 ```
 
 
-##
+## set
 ```
   a = [1,2,3,4,5,2,2]
   set(a)
+  set(re.findall(char, script101))
+```
+
+
+## remove colon using sub
+```
+  rachel = 'Rache:'
+  rachel = re.sub(':', '', rachel)
+```
+
+
+##  remove colon using slicing
+```
+  rachel[:-1]
+```
+
+
+## remove colon
+```
+  y = set(re.findall(char,  script101))
+  z = list(y)
+  character = []
+  for i in z:
+    character += [i[:-1]]
+```
+
+
+## List comprehension
+```
+  rawNames = list(set(re.findall(r'[A-Z][a-z]+:', script101)))
+  rawNames
+  character = [x[:-1] for x in rawNames]
+```
+
+
+## get discription
+```
+  re.findall(r'\([A-Za-z].+[a-z|\.]\)', script101)[:6]
+```
+
+## test getting discription regexp
+```
+  test = "(They all stare, bemused.) (adwdkald.)     (adjwdioa)"
+  re.findall(r'\([A-Za-z].+[a-z|\.]\)', test)[:6]
+```
+
+
+## seek
+```
+  import os, re
+  os.chdir(r'./')
+  f = open('friends101.txt', 'r')
+  f.read(100)
+  f.read(100)
+  f.seek(0)
+  f.read(100)
+```
+
+## readlinesfirst
+```
+f.seek(0)
+sentences = f.readlines()
+sentences[:3]
+```
+
+## first line ~ 20th line without empty line
+```
+  f.seek(0)
+  for i in sentences[:20]:
+    if re.match(r'[A-Z][a-z]+:', i):
+      print(i)
+```
+
+## List comprehension
+```
+  lines = [i for i in sentences if re.match(r'[A-Z][a-z]+:',i)]
+  lines[:10]
+```
+
+## get sentence include 'world' word
+```
+  world = [i for i in sentences if re.match(r'[A-Z][a-z]+:', i) and re.search('world', i)]
+
+  world
+```
+
+## get sentence include 'take' word
+```
+  take = [i for i in sentences if re.match(r'[A-Z][a-z]+:', i) and re.search('take', i)]
+
+  take
+
+  for i in take:
+    print(i)
+```
+
+## save sentences include 'would' word
+```
+  would = [i for i in sentences if re.match(r'[A-Z][a-z]+:', i) and re.search('would', i)]
+
+  newf = open('would.txt', 'w')
+  newf.writelines(would)
+  newf.close()
 ```
