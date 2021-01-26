@@ -126,7 +126,7 @@ unicode
 ## array addition
 
 ```
-arr3 = np.array([100,200,300])
+  arr3 = np.array([100,200,300])
 ```
 
 ```
@@ -172,6 +172,17 @@ arr3 = np.array([100,200,300])
   arr5 + arr1
 ```
 
+[9],
+[3]
++
+[2, 3, 4],
+[6, 7, 8]
+=
+[11, 12, 13],
+[ 9, 10, 11]
+
+
+
 ## the difference python list and numpy array
 ```
 d = np.array([[1,2,3,4,5],[2,4,5,6,7],[5,7,8,9,9]])
@@ -181,19 +192,25 @@ d_list = [
         [5,7,8,9,9]
       ]
 d_list
+type(d_list)
 ```
 
-##
+## indexing, slicing
+## colon in array, from front, from end
 ```
   arr4 = np.arange(10)
   arr4.shape
-  arr1.shape
-  arr1 + arr4
+  arr4[:5]
+  arr4[-3:]
 ```
 
+## array[:] = array[last]
 ```
-  arr5 = np.array([[9],[3]])
-  arr5.shape
-  arr1
-  arr5 + arr1
+  arr1[1,2]
+  arr1[0]
+  arr1[1]
+  arr1[1,0]
+  arr1[1,1]
+  arr1[1,2]
+  arr1[:,2]
 ```
